@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+.countryImage:hover {
+    cursor: pointer;
+}
+
+.imageP {
+    float: left;
+    padding: 1%;
+}
+
+button {
+    margin: 1%;
+}
