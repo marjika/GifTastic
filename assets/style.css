@@ -1,5 +1,13 @@
 * {
     box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+   
+    background-color: lightskyblue;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
 .countryImage:hover {
@@ -11,6 +19,17 @@
     padding: 1%;
 }
 
-button {
+button, #add-country {
     margin: 1%;
+    background-color: navy;
+    color: bisque;
+    padding-bottom: .5%;
+    padding-top: .5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 15px;
 }
+
+/* form {
+    float: right;
+} */

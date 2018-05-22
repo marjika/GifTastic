@@ -1,16 +1,17 @@
 $(document).ready(function() {
 
-var pageButtons = ["Egypt", "Japan", "Iceland"];
+var pageButtons = ["Egypt", "Japan", "Iceland", "New Zealand", "Chile", "United States"];
 
 var apiKey = "&api_key=spmJZeSndVCMYDdcytHjalTrFSqTQJ34";
 
 function makeButton() {
+    $("#buttonHolder").empty();
     for (var i = 0; i < pageButtons.length; i++) {
         var myButton = $("<button>");
         myButton.attr("data-country", pageButtons[i]);
         myButton.html(pageButtons[i]);
         myButton.addClass("button");
-        $("body").prepend(myButton);
+        $("#buttonHolder").prepend(myButton);
     }
 }
 
@@ -31,7 +32,6 @@ $(document).on("click", ".button", function() {
 
         console.log(response);
         for (var i=0; i<response.data.length; i++) {
-            // var userGifs = new constructGif(userImages[i].images.fixed_height_small_still.url, userImages[i].images.fixed_height_small.url, userImages[i].rating);
             var bothDiv = $("<div>");
             bothDiv.addClass("imageP");
             var p = $("<p>");
@@ -43,10 +43,10 @@ $(document).on("click", ".button", function() {
             
             imgGif.attr("alt", "country image");
             imgGif.addClass("countryImage");
-            p.text("Rating: " + userImages[i].rating);
-            
-            bothDiv.prepend(imgGif);
+            p.text(country + " Rated: " + userImages[i].rating);
             bothDiv.prepend(p);
+            bothDiv.prepend(imgGif);
+            
             $("#images").prepend(bothDiv);
         }
     });
@@ -65,20 +65,16 @@ $(document).on("click", ".countryImage", function() {
 
 });
 
+$("#add-country").on("click", function(event) {
+    event.preventDefault();
+    var country = $("#country-input").val().trim();
+    pageButtons.push(country);
+    makeButton();
+    $("#gif-form").find('input:text').val("");
+  });
+
 makeButton();
 
-        // var userGifs = userImages[i].images.fixed_height_still.url;
-        // console.log(userGifs);
-
-        // //makes a image div 
-        // var imgGif = $("<img>");
-
-        // //creates attributes for image div, where to get the source of the image (imageUrl) and an alt
-        // imgGif.attr("src", userGifs);
-        // imgGif.attr("alt", "Germany image");
-
-        // //takes the image div and prepends it to the images div
-        // $("#images").prepend(imgGif);
  
 
 });

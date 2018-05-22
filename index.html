@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nifty Giphty</title>
 
+  <link rel="shortcut icon" href="assets/images/UNFlag.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style.css">
   
@@ -14,17 +15,15 @@
   <script type="text/javascript" src="assets/giphy.js"></script>
 </head>
 
-<body>
-        <!-- <div class="button">
-            <button data-country="egypt" class="button">
-                Hello
-            </button>
-        <!-- </div>
-        <div class="button"> -->
-            <!-- <button data-country="japan" class="button">
-                Hello
-         <!-- </div> -->
-          <!-- </button> -->  
+<body style="background-image: url(&quot;assets/images/world_map.jpg&quot;);">
+  <div id="title"><h2>Press a button to see Gifs about that country</h2></div>
+
+        <div id="buttonHolder"></div>
+        <form id="gif-form">
+                <label for="country-input"><h5>Add a button for your favorite country.</h5></label>
+                <input type="text" id="country-input" style="text-align: left;">
+                <input id="add-country" type="submit" value="Add Button">
+              </form>
  
         <div id="images"></div>
 
