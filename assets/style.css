@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 .imageP {
     float: left;
     padding: 1%;
-}
+}   
 
 button, #add-country {
     margin: 1%;
@@ -30,6 +31,10 @@ button, #add-country {
     border-radius: 15px;
 }
 
-/* form {
-    float: right;
-} */
+p {
+    margin-bottom: 0;
+}
+
+.gifTitle {
+    font-weight: bold;
+}
